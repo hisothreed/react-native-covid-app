@@ -12,10 +12,7 @@ target 'coinmena' do
     :hermes_enabled => false
   )
 
-  target 'coinmenaTests' do
-    inherit! :complete
-    # Pods for testing
-  end
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   # Enables Flipper.
   #
