@@ -35,8 +35,8 @@ function colors(mode): Theme['colors'] {
       purple: '#6554C0',
       green: iOSColors.green,
       red: iOSColors.red,
-      black: 'black',
-      white: 'white',
+      black: {dark: 'white', light: 'black'}[mode],
+      white: {dark: 'black', light: 'white'}[mode],
     },
   };
 }

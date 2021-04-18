@@ -20,7 +20,7 @@ interface Props {
 
 const FilterButton = styled.TouchableOpacity<{size; theme: Theme}>`
   border-radius: ${props => props.size};
-  background: ${props => props.theme.colors.gray.gray6};
+  background: ${props => props.theme.colors.gray.gray5};
   align-items: center;
   justify-content: center;
   width: ${props => props.size};
@@ -66,14 +66,14 @@ function CountriesStats(props: Props) {
           <FilterButton
             onPress={props.onSort}
             style={{marginRight: 10}}
-            size={widthPercentageToDP(8)}>
+            size={widthPercentageToDP(10)}>
             <AppIcon.Ionicons
               name={'filter-outline'}
               size={widthPercentageToDP(4)}
               color={colors.generic.blue}
             />
           </FilterButton>
-          <FilterButton onPress={props.onFilter} size={widthPercentageToDP(8)}>
+          <FilterButton onPress={props.onFilter} size={widthPercentageToDP(10)}>
             <AppIcon.Ionicons
               name={'search'}
               size={widthPercentageToDP(4)}

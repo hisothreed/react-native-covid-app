@@ -4,7 +4,7 @@ import React, {
   forwardRef,
   useEffect,
 } from 'react';
-import styled from 'styled-components/native';
+import styled, {useTheme} from 'styled-components/native';
 import {
   Animated,
   StyleSheet,
@@ -12,6 +12,7 @@ import {
   StyleProp,
   Dimensions,
 } from 'react-native';
+import {Theme} from '../../../theme/types';
 
 interface Props {
   children?;
@@ -41,7 +42,7 @@ const OutsideClicker = styled.Pressable`
 const CardModal = forwardRef<CardModalRef, Props>((props, ref) => {
   const [opacity] = useState(new Animated.Value(0));
   const [isVisible, setIsVisible] = useState(false);
-
+  const theme = useTheme() as Theme;
   const animateOut = () => {
     return new Promise(resolve => {
       Animated.timing(opacity, {
@@ -96,6 +97,7 @@ const CardModal = forwardRef<CardModalRef, Props>((props, ref) => {
         style={[
           styles.content,
           props.style,
+          {backgroundColor: theme.colors.background.primary},
           styles.card,
           {
             opacity: opacity.interpolate({
@@ -121,7 +123,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.4)',
   },
   content: {
-    backgroundColor: 'white',
     alignItems: 'center',
     zIndex: 100000,
     overflow: 'hidden',

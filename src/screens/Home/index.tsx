@@ -116,7 +116,7 @@ Home.options = (): Options => ({
 });
 
 const styles = StyleSheet.create({
-  container: {flex: 1, paddingHorizontal: widthPercentageToDP(4)},
+  container: {flex: 1, paddingHorizontal: widthPercentageToDP(4), paddingBottom: widthPercentageToDP(20)},
   safeArea: {flex: 1},
 });
 

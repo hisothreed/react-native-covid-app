@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {useTheme} from 'styled-components';
 import {ICountry} from '../../../lib/types/ICountry';
@@ -39,21 +39,18 @@ function CountryItem(props: Props) {
       <Label weight={'bold'} size={'title3'}>
         {props.country.Country}
       </Label>
-      <Row justifyContent={'space-between'} style={{ marginTop: widthPercentageToDP(3) }}>
-        {sections.map(section => (
-          <View>
+      <Row
+        justifyContent={'space-between'}
+        style={{marginTop: widthPercentageToDP(3)}}>
+        {sections.map((section, index) => (
+          <View key={index}>
             <Label
-              key={section.key}
               weight={'semibold'}
               color={theme.colors.text.primary}
               size={'title3'}>
               {props.country[section.key]}
             </Label>
-            <Label
-              key={section.key}
-              weight={'semibold'}
-              color={section.color}
-              size={'caption1'}>
+            <Label weight={'semibold'} color={section.color} size={'caption1'}>
               {section.title}
             </Label>
           </View>

@@ -29,7 +29,7 @@ const Label = memo((props: LabelProps) => {
       style={[
         human[props.size] || {},
         systemWeights[props.weight] || {},
-        props.color && {color: props.color},
+        {color: props.color || colors.text.primary},
         props.type && {color: colors.text[props.type]},
         props.style,
       ]}>

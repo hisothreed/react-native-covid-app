@@ -11,6 +11,7 @@ import {Theme} from '../../theme/types';
 import {ICountry} from '../../lib/types/ICountry';
 import Row from '../../shared/components/Row';
 import {Screens} from '../../navigation/screens';
+import {icons} from '../../assets';
 import CountryItem from './CountryItem';
 
 interface Props {
@@ -54,13 +55,18 @@ function Countries(props: Props & NavigationComponentProps) {
     return items;
   }, [query]);
 
-  const keyExtractor = (item: ICountry, index) => item.ID;
+  const keyExtractor = (item: ICountry, index) =>
+    index.toString() + '-' + Math.random();
 
   return (
     <FlatList
       stickyHeaderIndices={[0]}
       ListHeaderComponent={
-        <Row style={styles.searchContainer}>
+        <Row
+          style={[
+            styles.searchContainer,
+            {backgroundColor: theme.colors.generic.white},
+          ]}>
           <View
             style={[
               styles.inputContainer,
@@ -85,16 +91,12 @@ function Countries(props: Props & NavigationComponentProps) {
 }
 Countries.options = (): Options => ({
   topBar: {
-    visible: true,
-    background: {
-      color: 'white',
-    },
     title: {
       text: 'Cases by country',
     },
     leftButtons: [
       {
-        color: 'black',
+        icon: icons.close,
         id: 'dismiss',
         text: 'Cancel',
       },
@@ -104,7 +106,6 @@ Countries.options = (): Options => ({
 
 const styles = StyleSheet.create({
   searchContainer: {
-    backgroundColor: 'white',
     paddingHorizontal: widthPercentageToDP(3.5),
     paddingVertical: widthPercentageToDP(2),
   },

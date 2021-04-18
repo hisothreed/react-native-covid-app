@@ -17,7 +17,6 @@ const Container = styled.TouchableOpacity<{theme: Theme}>`
   border-bottom-color: ${props => props.theme.colors.seperator.opaque};
   border-bottom-width: 1;
   width: 100%;
-  ${props => props.theme.shadows.card};
 `;
 
 function SortPickerOption(props: Props) {
