@@ -76,7 +76,7 @@ function Countries(props: Props & NavigationComponentProps) {
               onChangeText={setQuery}
               value={query}
               autoFocus
-              style={styles.input}
+              style={[styles.input, {color: theme.colors.text.primary}]}
               placeholder={'Search by country name'}
             />
           </View>
