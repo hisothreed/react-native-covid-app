@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.coinmena",
+  "applicationId": "com.covidApp",
   "variantName": "processReleaseResources",
   "elements": [
     {

@@ -10,7 +10,7 @@ export enum Screens {
   SortPicker = 'SortPicker',
 }
 
-const registerScreenWithRedux = (name: string, component: React.FC<any>) => {
+const registerScreen = (name: string, component: React.FC<any>) => {
   Navigation.registerComponent(
     name,
     () => props => ScreenWrapper(props, component),
@@ -18,6 +18,6 @@ const registerScreenWithRedux = (name: string, component: React.FC<any>) => {
   );
 };
 
-registerScreenWithRedux(Screens.Home, Home);
-registerScreenWithRedux(Screens.SortPicker, SortPicker);
-registerScreenWithRedux(Screens.Countries, Countries);
+registerScreen(Screens.Home, Home);
+registerScreen(Screens.SortPicker, SortPicker);
+registerScreen(Screens.Countries, Countries);
