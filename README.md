@@ -2,7 +2,7 @@
 
 A simple app to show latest Covid-19 cases with the ability to search and rank countries by the number of cases, deaths and recoveries.
 
-built with [React-Native](https://github.com/facebook/react-native) for iOS and Android, an example of how to use dark mode, havigng custom design system and theme using [Styled-Components](https://www.styled-components.com/) all combined with Wix's [React-Native-Navigation](https://github.com/wix/react-native-navigation/).
+built with [React-Native](https://github.com/facebook/react-native) for iOS and Android, with dark mode support, custom design system and theming using [Styled-Components](https://www.styled-components.com/) all combined with [Wix  React-Native-Navigation](https://github.com/wix/react-native-navigation/).
 
 ## Stack
 
@@ -19,7 +19,6 @@ built with [React-Native](https://github.com/facebook/react-native) for iOS and 
 [react-native-typography](https://github.com/hectahertz/react-native-typography)
 
 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons/issues)
-
 
 ## Preview
 
@@ -43,5 +42,4 @@ $ react-native run-ios
 
 ## Contribute
 
-I will happily accept your ideas, features you want to add or things you want to discuss regarding the app implementaion, i'm trying to set an example of how to use different libraries and have a SOLID clean app architecture that works perfectly with top RN libraries.
-let me know by opening an issue, PR, or messaging me on [Twitter](https://twitter.com/hussein_dev).
+Open for new ideas, features you want to add or things you want to discuss regarding the app implementaion, if you have a better structure implementation in mind please let me know by opening an issue, PR, or messaging me on [Twitter](https://twitter.com/hussein_dev).
