@@ -42,4 +42,4 @@ $ react-native run-ios
 
 ## Contribute
 
-Open for new ideas, features you want to add or things you want to discuss regarding the app implementaion, if you have a better structure implementation in mind please let me know by opening an issue, PR, or messaging me on [Twitter](https://twitter.com/hussein_dev).
+Open for new ideas, features you want to add or things you want to discuss regarding the app implementaion or if you have a better structure implementation in mind please let me know by opening an issue, PR, or messaging me on [Twitter](https://twitter.com/hussein_dev).
